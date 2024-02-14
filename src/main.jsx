@@ -23,47 +23,63 @@ import CartPage from "./shop/CartPage.jsx";
 import SingleBlog from "./blog/SingleBlog.jsx";
 import About from "./about/About.jsx";
 import Contact from "./contact/Contact.jsx";
-
-
+import AuthProvider from "./contexts/AuthProvider.jsx";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
-      {path: "/", element: <Home/>},
+      { path: "/", element: <Home /> },
       {
-        path: "/blog", 
-        element: <Blog/>
+        path: "/blog",
+        element: <Blog />,
       },
       {
-        path: "/blog/:id", 
-        element: <SingleBlog/>
+        path: "/blog/:id",
+        element: <SingleBlog />,
       },
       {
         path: "/shop",
-        element: <Shop />
+        element: <Shop />,
       },
       {
         path: "/shop/:id",
-        element: <SingleProduct />
+        element: <SingleProduct />,
       },
       {
         path: "/cart-page",
-        element: <CartPage />
-      },  
+        element: (
+          <PrivateRoute>
+            <CartPage />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/about",
-        element: <About />
-      },  
+        element: <About />,
+      },
       {
         path: "/contact",
-        element: <Contact />
-      }  
-  ],
+        element: <Contact />,
+      },
+    ],
   },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/sign-up",
+    element: <Signup />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
 );
