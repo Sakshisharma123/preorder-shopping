@@ -41,7 +41,7 @@ const About = () => {
                             <img src="/images/about/01.jpg" alt="" />
                         </div>
                         <div className="abs-thumb">
-                            <img src="/src/assets/images/about/02.jpg" alt="" />
+                            <img src="/images/about/02.jpg" alt="" />
                         </div>
                         <div className="about-left-content">
                             <h5>{year}</h5>
