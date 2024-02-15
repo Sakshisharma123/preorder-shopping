@@ -88,7 +88,7 @@ const SingleBlog = () => {
                                   possimus tenetur.
                                 </p>
                                 <img
-                                  src="/src/assets/images/blog/single/01.png"
+                                  src="/images/blog/single/01.png"
                                   alt=""
                                 />
                                 <p>
@@ -106,7 +106,7 @@ const SingleBlog = () => {
                                 </p>
                                 <div className="video-thumb">
                                   <img
-                                    src="/src/assets/images/blog/single/02.jpg"
+                                    src="/images/blog/single/02.jpg"
                                     alt=""
                                   />
                                   <a
