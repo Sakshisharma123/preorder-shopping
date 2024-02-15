@@ -84,7 +84,7 @@ const ProductDisplay = ({ item }) => {
         <form onSubmit={handleSubmit}>
           {/* size */}
           <div className="select-product size">
-            <select value={color} onChange={handleSizeChange}>
+            <select value={size} onChange={handleSizeChange}>
               <option>Select Size</option>
               <option value="SM">SM</option>
               <option value="MD">MD</option>
@@ -96,7 +96,7 @@ const ProductDisplay = ({ item }) => {
           {/* color */}
           <div className="select-product color">
             <select value={color} onChange={handleColorChange}>
-              <option>Select Size</option>
+              <option>Select Color</option>
               <option value="Pink">Pink</option>
               <option value="Red">Red</option>
               <option value="Green">Green</option>

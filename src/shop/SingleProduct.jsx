@@ -45,7 +45,7 @@ const SingleProduct = () => {
                           autoplay={{
                             delay: 2000,
                             disableOnInteraction: false
-                          }}
+                          }} 
                           modules={{Autoplay}}
                           navigation={
                             {
@@ -65,11 +65,12 @@ const SingleProduct = () => {
                                 ))
                            }
                           </Swiper>
-                          <div className="pro-single-prev">
-                                <i className="icofont-rounded-right"></i>
-                          </div>
+                         
                           <div className="pro-single-next">
                                 <i className="icofont-rounded-left"></i>
+                          </div>
+                          <div className="pro-single-prev">
+                                <i className="icofont-rounded-right"></i>
                           </div>
                         </div>
                       </div>

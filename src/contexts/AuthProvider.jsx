@@ -19,7 +19,7 @@ const createUser = (email, password) => {
 // create user using gmail
 const  signUpWithGmail = () => {
      setLoading(true)
-     return signInWithPopup(auth, googleProvider )
+     return signInWithPopup(auth, googleProvider)
 }
 
 // login

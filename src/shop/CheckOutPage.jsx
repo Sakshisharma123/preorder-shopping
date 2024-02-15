@@ -127,7 +127,7 @@ const CheckOutPage = () => {
                           <span>Card Number</span>
                           <i className="fa fa-eye"></i>
                         </div>
-                        <div className="d-flex flex-row">
+                        <div className="d-flex flex-row"> 
                           <div className="inputbox">
                             <input
                               type="text"

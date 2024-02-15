@@ -12,7 +12,7 @@ const showResults = "showing 01- 12 of 139 Results";
 const Shop = () => {
   const [GridList, setGridList] = useState(true);
   const [products, setProducts] = useState(Data);
-
+console.log(Data);
   // pagination
 
   const [currentPage, setCurrentPage] = useState(1);

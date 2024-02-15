@@ -21,7 +21,7 @@ const ShopCategory = ({
               key={id}
               onClick={() => filterItem(Val)}
             >
-              {Val}
+            {Val}
             </button>
           );
         })}

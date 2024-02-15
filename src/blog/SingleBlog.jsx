@@ -110,7 +110,7 @@ const SingleBlog = () => {
                                     alt=""
                                   />
                                   <a
-                                    href="https://youtube"
+                                    href="https://www.youtube.com/watch?v=bMknfKXIFA8"
                                     className="video-button popup"
                                     target="_blank"
                                   >
@@ -183,7 +183,6 @@ const SingleBlog = () => {
                 </div>
               </article>
             </div>
-
 
             <div className="col-lg-4 col-12">
                 <aside>
