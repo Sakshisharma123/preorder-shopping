@@ -26,12 +26,14 @@ import Contact from "./contact/Contact.jsx";
 import AuthProvider from "./contexts/AuthProvider.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import Login from "./components/Login.jsx";
+import ErrorPage from './components/ErrorPage.jsx';
 import Signup from "./components/Signup.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
       {

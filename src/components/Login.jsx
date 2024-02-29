@@ -71,7 +71,7 @@ const Login = () => {
                   required
                 />
               </div>
-              {/* showing message */}
+              {/* showing error message */}
               <div>
                 {
                     errorMessage && (

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const title = "About ShopCart";
 const desc =
   "Eduaid theme number one world class university in the world There are student are studing always in this university for all time.";

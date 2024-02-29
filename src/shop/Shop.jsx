@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
-import Data from "../products.json";
+import Data from "/src/products.json"
 import ProductCards from "./ProductCards";
 import Pagination from "./Pagination";
 import Search from "./Search";
@@ -12,7 +12,7 @@ const showResults = "showing 01- 12 of 139 Results";
 const Shop = () => {
   const [GridList, setGridList] = useState(true);
   const [products, setProducts] = useState(Data);
-console.log(Data);
+
   // pagination
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,13 +38,12 @@ console.log(Data);
 
   const filterItem = (curcat) => {
     const newItem = Data.filter((newVal) => {
-      return newVal.category === curcat;
-      
+      return newVal.category === curcat;  
     })
 
     setSelectedCategory(curcat);
     setProducts(newItem);
-  }
+  };
 
   return (
     <div>

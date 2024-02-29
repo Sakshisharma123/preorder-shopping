@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-import Ratings from "../components/Ratings";
 import PopularPost from "./PopularPost";
 import Tags from "./Tags";
 
@@ -17,7 +16,6 @@ import Review from "./Review";
 const SingleProduct = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-
   useEffect(() => {
     fetch("/src/products.json")
       .then((res) => res.json())
@@ -38,52 +36,48 @@ const SingleProduct = () => {
                     <div className="col-md-6 col-12">
                       <div className="product-thumb">
                         <div className="swiper-container pro-single-top">
-                          <Swiper 
-                          spaceBetween={30}
-                          slidesPerView={1}
-                          Loop = {"true"}
-                          autoplay={{
-                            delay: 2000,
-                            disableOnInteraction: false
-                          }} 
-                          modules={{Autoplay}}
-                          navigation={
-                            {
-                                prevE1: ".pro-single-prev",
-                                nextvE1: ".pro-single-next"
-                            }
-                          }
-                          className="mySwiper">
-                           {
-                                result.map((item, i) => (
-                                    <SwiperSlide key={i}>
-                                        <div className="single-thumb">
-                                            <img src={item.img} alt="" />
-                                        </div>
-                                        
-                                    </SwiperSlide>
-                                ))
-                           }
+                          <Swiper
+                            spaceBetween={30}
+                            slidesPerView={1}
+                            Loop={"true"}
+                            autoplay={{
+                              delay: 2000,
+                              disableOnInteraction: false,
+                            }}
+                            modules={{ Autoplay }}
+                            navigation={{
+                              prevE1: ".pro-single-prev",
+                              nextvE1: ".pro-single-next",
+                            }}
+                            className="mySwiper"
+                          >
+                            {result.map((item, i) => (
+                              <SwiperSlide key={i}>
+                                <div className="single-thumb">
+                                  <img src={item.img} alt="" />
+                                </div>
+                              </SwiperSlide>
+                            ))}
                           </Swiper>
-                         
+
                           <div className="pro-single-next">
-                                <i className="icofont-rounded-left"></i>
+                            <i className="icofont-rounded-left"></i>
                           </div>
                           <div className="pro-single-prev">
-                                <i className="icofont-rounded-right"></i>
+                            <i className="icofont-rounded-right"></i>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div className="col-md-6 col-12">
-                    <div className="post-content">
-                           <div>
-                            {
-                                result.map(item => <ProductDisplay key={item.id} item={item} />)
-                            }
-                           </div>
-                    </div>
+                      <div className="post-content">
+                        <div>
+                          {result.map((item) => (
+                            <ProductDisplay key={item.id} item={item} />
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
