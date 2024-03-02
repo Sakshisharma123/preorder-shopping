@@ -15,7 +15,7 @@ const NavItems = () => {
   const handleLogout = () => {
     logOut()
       .then(() => {
-        // Sign-out successful.
+        
       })
       .catch((error) => {
         console.log(error);

@@ -16,10 +16,31 @@ import Review from "./Review";
 const SingleProduct = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
+ 
+
   useEffect(() => {
-    fetch("/src/products.json")
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/products.json");
+
+        if (!response.ok) {
+          throw new Error(`Network response was not ok. Status: ${response.status}`);
+        }
+  
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error(`Invalid content type. Expected JSON, but received: ${contentType}`);
+        }
+  
+        const data = await response.json();
+        setProduct(data);
+      } catch (error) {
+        console.error('Error fetching or parsing data:', error.message);
+        
+      }
+    };
+  
+    fetchData();
   }, []);
 
   const result = product.filter((p) => p.id === id);

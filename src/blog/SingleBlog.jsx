@@ -13,11 +13,9 @@ const socialList = [
 ];
 const SingleBlog = () => {
   const [blog, setBlog] = useState(blogList);
-  console.log(blogList);
   const { id } = useParams();
 
   const result = blog.filter((b) => b.id === Number(id));
-  console.log(result);
   return (
     <div>
       <PageHeader title={"Single Blog Pages"} curPage={"Blog / Blog Details"} />
