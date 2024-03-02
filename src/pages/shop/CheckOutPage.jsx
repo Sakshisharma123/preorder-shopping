@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
-import "../components/modal.css";
+import "../../components/modal.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const CheckOutPage = () => {

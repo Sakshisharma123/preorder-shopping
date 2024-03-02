@@ -1,6 +1,6 @@
 import React from "react";
-import PageHeader from "../components/PageHeader";
-import GoogleMap from "../components/GoogleMap";
+import PageHeader from "../../components/PageHeader";
+import GoogleMap from "../../components/GoogleMap";
 
 const subTitle = "Get in touch with us";
 const title = "We're Always Eager To Hear From You!";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import blogList from "../utilis/blogdata";
+import blogList from "../../utilis/blogdata";
 import { useParams } from "react-router-dom";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../../components/PageHeader";
 import PopularPost from "../shop/PopularPost";
 import Tags from "../shop/Tags";
 const socialList = [

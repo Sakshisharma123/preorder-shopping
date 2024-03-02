@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Ratings from "../components/Ratings";
+import Ratings from "../../components/Ratings";
 
 const reviewtitle = "Add a Review";
 let ReviewList = [

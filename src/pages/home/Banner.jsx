@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import productData from "/public/products.json";
 import { Link } from "react-router-dom";
-import SelectedCategory from "../components/SelectedCategory";
+import SelectedCategory from "../shop/SelectedCategory";
+
 const title = (
   <h2>
     Search Your One From <span>Thousands</span> of Products

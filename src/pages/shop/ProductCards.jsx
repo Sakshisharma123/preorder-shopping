@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Ratings from "../components/Ratings";
+import Ratings from "../../components/Ratings";
 
 const ProductCards = ({ GridList, products }) => {
   return (

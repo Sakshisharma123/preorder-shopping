@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Ratings from "../components/Ratings";
+import Ratings from "../../components/Ratings";
 import { Link } from "react-router-dom";
 const title = "Our Products";
 
